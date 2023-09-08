@@ -1,0 +1,17 @@
+C:\Users\smerv\source\repos\SifreKasasiApp.Business\bin\Debug\net6.0\SifreKasasiApp.Business.deps.json
+C:\Users\smerv\source\repos\SifreKasasiApp.Business\bin\Debug\net6.0\SifreKasasiApp.Business.dll
+C:\Users\smerv\source\repos\SifreKasasiApp.Business\bin\Debug\net6.0\SifreKasasiApp.Business.pdb
+C:\Users\smerv\source\repos\SifreKasasiApp.Business\bin\Debug\net6.0\SifreKasasiApp.Data.dll
+C:\Users\smerv\source\repos\SifreKasasiApp.Business\bin\Debug\net6.0\SifreKasasiApp.EntityLayer.dll
+C:\Users\smerv\source\repos\SifreKasasiApp.Business\bin\Debug\net6.0\SifreKasasiApp.Data.pdb
+C:\Users\smerv\source\repos\SifreKasasiApp.Business\bin\Debug\net6.0\SifreKasasiApp.EntityLayer.pdb
+C:\Users\smerv\source\repos\SifreKasasiApp.Business\obj\Debug\net6.0\SifreKasasiApp.Business.csproj.AssemblyReference.cache
+C:\Users\smerv\source\repos\SifreKasasiApp.Business\obj\Debug\net6.0\SifreKasasiApp.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\smerv\source\repos\SifreKasasiApp.Business\obj\Debug\net6.0\SifreKasasiApp.Business.AssemblyInfoInputs.cache
+C:\Users\smerv\source\repos\SifreKasasiApp.Business\obj\Debug\net6.0\SifreKasasiApp.Business.AssemblyInfo.cs
+C:\Users\smerv\source\repos\SifreKasasiApp.Business\obj\Debug\net6.0\SifreKasasiApp.Business.csproj.CoreCompileInputs.cache
+C:\Users\smerv\source\repos\SifreKasasiApp.Business\obj\Debug\net6.0\SifreKasasiApp.Business.csproj.CopyComplete
+C:\Users\smerv\source\repos\SifreKasasiApp.Business\obj\Debug\net6.0\SifreKasasiApp.Business.dll
+C:\Users\smerv\source\repos\SifreKasasiApp.Business\obj\Debug\net6.0\refint\SifreKasasiApp.Business.dll
+C:\Users\smerv\source\repos\SifreKasasiApp.Business\obj\Debug\net6.0\SifreKasasiApp.Business.pdb
+C:\Users\smerv\source\repos\SifreKasasiApp.Business\obj\Debug\net6.0\ref\SifreKasasiApp.Business.dll
