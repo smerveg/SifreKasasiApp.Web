@@ -1,0 +1,242 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@section Scripts{
+    <script>
+        $(function(){
+            loadData();
+        })
+        function loadData() {
+
+            var userId = @ViewBag.ID;
+
+            $.ajax({
+                url: "https://localhost:7206/api/UserAccount?userId="+userId,
+                type: "GET",
+                contentType: "application/json;",
+                // data:userId,
+                success: function (result) {
+                    var html = '';
+                    $.each(result, function (key, item) {
+
+
+                        $('.tbody').append(
+                            '<tr><td>' + item.webSiteName +
+                             '</td><td>' + item.userNameForWebSite +
+                            '</td><td>' + item.passwordForWebSite +
+                            '</td><td><button type="button" class="btn btn-warning" onclick="Edit(' + item.userAccountId + ');">Edit</button>' +
+                            '</td><td><button type="button" class="btn btn-danger" onclick="Delete(' + item.userAccountId + ');">Delete</button>' +
+                            '</td></tr>'
+                        )
+                    });
+                    // $('.tbody').html(html);
+
+                },
+                error: function (err) {
+                    alert('Something went wrong.');
+                }
+            });
+        }
+
+        function Add() {
+            var userid = @ViewBag.ID;
+            var websitename = $("#webSiteName").val();
+            var username = $("#userName").val();
+            var password = $("#password").val();
+            var model = { UserId:userid, WebSiteName: websitename, UserNameForWebSite: username, PasswordForWebSite: password };
+
+            $.ajax({
+                url: "https://localhost:7206/api/UserAccount",
+                type: "POST",
+                contentType: "application/json;",
+                data: JSON.stringify(model),
+                success: function (result) {
+                    $(".tbody tr").remove();
+                    loadData();
+                    $("#addModal").modal("hide");
+                    $("#webSiteName").val("");
+                    $("#userName").val("");
+                    $("#password").val("");
+                    alert("Account added.");
+
+
+                },
+                error: function (err) {
+                    alert('Something went wrong.');
+                }
+            });
+        }
+
+        function Edit(accountId) {
+            var userid = @ViewBag.ID;
+
+            $.ajax({
+                url: "https://localhost:7206/api/UserAccount/GetAccount?accountId=" + accountId,
+                type: "GET",
+                contentType: "application/json;",
+                dataType:"json",
+                success: function (result) {
+                    $("#userAccountId").val(accountId);
+                    $("#ewebSiteName").val(result.webSiteName);
+                    $("#euserName").val(result.userNameForWebSite);
+                    $("#epassword").val(result.passwordForWebSite);
+                    $("#editModal").modal("show");
+
+
+
+                },
+                error: function (err) {
+                    alert('Something went wrong.');
+                }
+            });
+        }
+
+        function Update() {
+            var userid = @ViewBag.ID;
+            var userAccountId = $("#userAccountId").val();
+            var websitename = $("#ewebSiteName").val();
+            var username = $("#euserName").val();
+            var password = $("#epassword").val();
+            var model = { UserId:userid,UserAccountId:userAccountId, WebSiteName: websitename, UserNameForWebSite: username, PasswordForWebSite: password };
+
+            $.ajax({
+                url: "https://localhost:7206/api/UserAccount/UpdateAccount",
+                type: "POST",
+                contentType: "application/json;",
+                data: JSON.stringify(model),
+                success: function (result) {
+                    $(".tbody tr").remove();
+                    loadData();
+                    $("#editModal").modal("hide");
+                    $("#userAccountId").val("");
+                    $("#ewebSiteName").val("");
+                    $("#euserName").val("");
+                    $("#epassword").val("");
+                    alert("Account updeted.");
+
+
+                },
+                error: function (err) {
+                    alert('Something went wrong.');
+                }
+            });
+        }
+
+        function Delete(accountId) {
+            var userid = @ViewBag.ID;
+
+            $.ajax({
+                url: "https://localhost:7206/api/UserAccount/DeleteAccount?accountId=" + accountId,
+                type: "POST",
+                contentType: "application/json;",
+
+                success: function () {
+                    alert('Account deleted.');
+                    $(".tbody tr").remove();
+                    loadData();
+
+
+
+
+                },
+                error: function (err) {
+                    alert('Something went wrong.');
+                }
+            });
+        }
+    </script>
+
+}
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <button type="button" class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#addModal">Add Account</button>
+    </div>
+    <div class="panel-body">
+
+
+        <table class="table table-bordered" id="accountTable">
+            <thead>
+                <tr>
+                    <th>Web Site Name</th>
+                    <th>User Name</th>
+                    <th>Password</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody class="tbody"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">New Account</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addForm">
+                    <div class="mb-6">
+                        <label for="webSiteName" class="form-label" style="text-align:left">Web Site Name</label>
+                        <input type="text" class="form-control" id="webSiteName">
+
+                    </div>
+                    <div class="mb-6">
+                        <label for="userName" class="form-label" style="text-align:left">User Name</label>
+                        <input type="text" class="form-control" id="userName">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label" style="text-align:left">Password</label>
+                        <input type="text" class="form-control" id="password">
+                    </div>
+
+                    <button type="button" class="btn btn-primary" onclick="Add();">Save</button>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Account</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editForm">
+                    <input type="hidden" class="form-control" id="userAccountId">
+                    <div class="mb-6">
+                        <label for="ewebSiteName" class="form-label" style="text-align:left">Web Site Name</label>
+                        <input type="text" class="form-control" id="ewebSiteName">
+
+                    </div>
+                    <div class="mb-6">
+                        <label for="euserName" class="form-label" style="text-align:left">User Name</label>
+                        <input type="text" class="form-control" id="euserName">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="epassword" class="form-label" style="text-align:left">Password</label>
+                        <input type="text" class="form-control" id="epassword">
+                    </div>
+
+                    <button type="button" class="btn btn-primary" onclick="Update();">Save</button>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
