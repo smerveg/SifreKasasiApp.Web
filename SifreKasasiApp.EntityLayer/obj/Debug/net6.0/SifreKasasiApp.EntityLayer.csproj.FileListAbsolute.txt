@@ -1,0 +1,12 @@
+C:\Users\smerv\source\repos\SifreKasasiApp.EntityLayer\bin\Debug\net6.0\SifreKasasiApp.EntityLayer.deps.json
+C:\Users\smerv\source\repos\SifreKasasiApp.EntityLayer\bin\Debug\net6.0\SifreKasasiApp.EntityLayer.dll
+C:\Users\smerv\source\repos\SifreKasasiApp.EntityLayer\bin\Debug\net6.0\SifreKasasiApp.EntityLayer.pdb
+C:\Users\smerv\source\repos\SifreKasasiApp.EntityLayer\obj\Debug\net6.0\SifreKasasiApp.EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\smerv\source\repos\SifreKasasiApp.EntityLayer\obj\Debug\net6.0\SifreKasasiApp.EntityLayer.AssemblyInfoInputs.cache
+C:\Users\smerv\source\repos\SifreKasasiApp.EntityLayer\obj\Debug\net6.0\SifreKasasiApp.EntityLayer.AssemblyInfo.cs
+C:\Users\smerv\source\repos\SifreKasasiApp.EntityLayer\obj\Debug\net6.0\SifreKasasiApp.EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\smerv\source\repos\SifreKasasiApp.EntityLayer\obj\Debug\net6.0\SifreKasasiApp.EntityLayer.dll
+C:\Users\smerv\source\repos\SifreKasasiApp.EntityLayer\obj\Debug\net6.0\refint\SifreKasasiApp.EntityLayer.dll
+C:\Users\smerv\source\repos\SifreKasasiApp.EntityLayer\obj\Debug\net6.0\SifreKasasiApp.EntityLayer.pdb
+C:\Users\smerv\source\repos\SifreKasasiApp.EntityLayer\obj\Debug\net6.0\ref\SifreKasasiApp.EntityLayer.dll
+C:\Users\smerv\source\repos\SifreKasasiApp.EntityLayer\obj\Debug\net6.0\SifreKasasiApp.EntityLayer.csproj.AssemblyReference.cache

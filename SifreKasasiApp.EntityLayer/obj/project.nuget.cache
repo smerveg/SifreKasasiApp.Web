@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "cDTx1sMx5+K6FkLr26wzZ0VRfem6DbebEkLpwwL+gyO3Ata38oV6TmYaAvqNTMNlPcnIUQnQ5gLXErO97JMN5w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\smerv\\source\\repos\\SifreKasasiApp.EntityLayer\\SifreKasasiApp.EntityLayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\smerv\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.21\\microsoft.entityframeworkcore.abstractions.6.0.21.nupkg.sha512"
+  ],
+  "logs": []
+}
